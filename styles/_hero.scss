@@ -1,0 +1,49 @@
+.hero {
+
+  // .hero__text
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 900px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    font-size: clamp(14px, 2vw, 42px);
+    text-align: center;
+    padding: 0 50px;
+  }
+
+  // .hero__text-title
+  &__text-title {
+    font-family: 'pphatton';
+    line-height: 120%;
+    margin-bottom: 25px;
+  }
+
+  // .hero__ratio
+  &__ratio {
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+    // .hero__ratio::before
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      aspect-ratio: 16/10;
+      height: 100vh;
+    }
+  }
+
+  // .hero__ratio-content
+  &__ratio-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,18 @@
+.search-info {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 25px;
+  margin-top: 125px;
+  margin-bottom: 50px;
+
+  @media screen and (max-width: 767px) {
+    padding: 0 15px;
+  }
+
+  // .search-info__results-text
+  &__results-text {
+    text-align: center;
+    font-size: clamp(16px, 4vw, 32px);
+    text-transform: uppercase;
+  }
+}

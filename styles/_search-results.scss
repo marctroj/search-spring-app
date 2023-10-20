@@ -1,0 +1,115 @@
+// .search-results
+.search-results {
+  padding: 25px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 20px;
+  grid-row-gap: 50px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 25px;
+  margin-top: 25px;
+  margin-bottom: 100px;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    grid-row-gap: 50px;
+    padding: 0 15px;
+  }
+
+  // .search-results__item
+  &__item {
+    text-align: center;
+  }
+
+  // .search-results__image
+  &__image {
+    width: 100%;
+
+    // .search-results__image:hover
+    &:hover {
+      scale: 1.1;
+    }
+  }
+
+  // .search-results__info
+  &__info {
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  // .search-results__name
+  &__name {
+    margin-bottom: 10px;
+    font-size: 16px;
+    height: 35px;
+
+    @media screen and (max-width: 767px){
+      font-size: 14px;
+    }
+  }
+
+  // .search-results__msrp
+  &__msrp {
+    text-decoration: line-through;
+    color: $red-1;
+  }
+
+  // .search-results__price-wrapper
+  &__price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  // .search-results__ratio
+  &__ratio {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  
+    // .search-results__ratio::before
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      aspect-ratio: 3/4.4;
+    }
+  }
+
+  // .search-results__ratio-content
+  &__ratio-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  // .search-results__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .search-results__atc
+  &__atc {
+    background: $red-1;
+    border: none;
+    color: $white-1;
+    padding: 5px;
+    cursor: pointer;
+    transition: opacity 300ms ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+/**
+ * Loading
+ *
+ * Lazy load
+ * Lazy load container
+ * Loading animation
+ * Is loading
+ */
+
+/**
+ * Lazy load
+ */
+.lazyload,
+.lazyloading {
+  opacity: 0;
+  filter: blur(4px);
+  transition: all 300ms ease-in-out;
+}
+
+.lazyloaded {
+  opacity: 1;
+  filter: blur(0);
+  transition: all 300ms ease-in-out;
+}

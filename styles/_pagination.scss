@@ -1,0 +1,42 @@
+.pagination-btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 25px;
+  padding-bottom: 25px;
+
+  // .pagination-btns:last-child
+  &:last-child {
+    padding-bottom: 75px;
+  }
+
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+
+  // .pagination-btns__wrapper
+  &__btns-wrapper {
+    display: flex;
+    gap: 10px;
+  }
+
+  // .pagination-btns__page-number
+  &__page-number {
+    text-align: center;
+    font-size: clamp(16px, 2vw, 18px);
+  }
+
+  // .pagination-btns .arrow
+  .arrow {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white-1;
+  }
+}
